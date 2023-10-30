@@ -49,6 +49,11 @@ const InfoDiv = styled.div`
   align-items: center;
   margin: 0;
   padding: 0;
+
+  &:hover > * {
+    color: #800020;
+  }
+  
 `;
 
 export function Input({ value, onChange, password = false }) {
