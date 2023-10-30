@@ -34,6 +34,12 @@ const InputContainer = styled.div`
   gap: 1rem;
 `;
 
+const InputBox = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+`;
+
 const RememberMeCheckbox = styled(CheckBox)`
   grid-row: 1;
   grid-column: 1;
@@ -71,10 +77,6 @@ const TextRight = styled.div`
   text-align: right;
 `;
 
-const TextBold = styled.div`
-  font-weight: bold;
-`;
-
 export function LoginPane() {
   const [loginId, setLoginId] = useState("");
   const [password, setPassword] = useState("");
@@ -88,8 +90,14 @@ export function LoginPane() {
       <LoginText>Login</LoginText>
 
       <InputContainer>
-        <Input placeholder={"Enter Login ID"} />
-        <Input placeholder={"Enter Password"} password />
+        <InputBox>
+          <span>Login ID</span>
+          <Input placeholder={"Enter Login ID"} />
+        </InputBox>
+        <InputBox>
+          <span>Password</span>
+          <Input placeholder={"Enter Password"} password />
+        </InputBox>
       </InputContainer>
 
       <OptionContainer>
