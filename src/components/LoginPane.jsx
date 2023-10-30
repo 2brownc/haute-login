@@ -20,6 +20,9 @@ const LoginDialogue = styled.div`
 
   @media (max-width: 576px) {
     width: 100vw;
+    height: 100vh;
+    border-radius: unset;
+    box-shadow: unset;
   }
 `;
 

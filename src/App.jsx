@@ -37,6 +37,7 @@ const RightHalf = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  max-width: 1000px;
 
   @media (max-width: 576px) {
     display: block;
