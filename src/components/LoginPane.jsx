@@ -4,6 +4,7 @@ import styled from "styled-components";
 import { Input } from "./Inputs";
 import { CheckBox } from "./CheckBox";
 import { HyperLink } from "./Hyperlink";
+import { LargeButton } from "./Button";
 
 const LoginDialogue = styled.div`
   width: 90%;
@@ -62,24 +63,12 @@ const OptionContainer = styled.div`
   color: grey;
 `;
 
-const TextRight = styled.div`
-  text-align: right;
+const ButtonContainer = styled.div`
+  width: 65%;
 `;
 
-const Button = styled.button`
-  width: 300px;
-  height: 50px;
-  background-color: #000;
-  color: white;
-  font-size: 16px;
-  font-weight: bold;
-  border-radius: 4px;
-  margin-top: 20px;
-
-  &:hover {
-    cursor: pointer;
-    background-color: #333;
-  }
+const TextRight = styled.div`
+  text-align: right;
 `;
 
 export function LoginPane() {
@@ -117,7 +106,10 @@ export function LoginPane() {
           </HyperLink>
         </TermsCheckbox>
       </OptionContainer>
-      <Button onClick={handleLogin}>Login</Button>
+
+      <ButtonContainer>
+        <LargeButton onClick={handleLogin} label={"Login"} />
+      </ButtonContainer>
 
       <p>
         Don't have an account? <HyperLink
