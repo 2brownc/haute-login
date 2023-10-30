@@ -9,9 +9,12 @@ Built with [ReactJS](https://react.dev/) and [Styled Components](https://styled-
 **Wide View**
 ![Wide View](screenshots/wide_view.png "A normal desktop. Landscape.")
 
+<br><br>
 
 **Narrow View**
 ![Narrow View](screenshots/narrow_view.png "A narrow screen.")
+
+<br><br>
 
 **Mobile View**
 ![Mobile View](screenshots/mobile_view.png "On a mobile screen.")
