@@ -8,7 +8,7 @@ import { FaEyeSlash } from 'react-icons/fa6';
 const InputContainer = styled.div`
   width: 100%;
   height: 2.5rem;
-  padding: 0 0.5rem 0 0;
+  padding: 0.3rem 0.5rem;
   margin: 0;
   border-radius: 0.4rem;
   box-sizing: border-box;
@@ -32,7 +32,7 @@ const InputBox = styled.input`
 
   box-sizing: border-box;
   margin: 0;
-  padding: 0 0.5rem 0 0.5rem;
+  padding: 0;
   border: none;
   outline: none;
 
