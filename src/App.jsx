@@ -6,6 +6,7 @@ import loginImage from '/login_page_side.jpeg';
 import { LoginPane } from "./components/LoginPane";
 
 const Container = styled.div`
+  font-family: "Jost";
   background-color: white;
   display: flex;
   flex-direction: row;
