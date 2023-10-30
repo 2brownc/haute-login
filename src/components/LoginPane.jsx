@@ -23,6 +23,10 @@ const LoginText = styled.h1`
   font-weight: bold;
 `;
 
+const InputContainer = styled.div`
+  width: 80%;
+`;
+
 const Button = styled.button`
   width: 300px;
   height: 50px;
@@ -66,12 +70,10 @@ export function LoginPane() {
     <LoginDialogue>
       <LoginText>Login</LoginText>
 
-      <Input />
-
-      <Input password />
-
-
-
+      <InputContainer>
+        <Input />
+        <Input password />
+      </InputContainer>
 
       <Checkbox type="checkbox" /> Remember Me
 

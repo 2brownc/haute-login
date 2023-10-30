@@ -7,16 +7,15 @@ import { FaEyeSlash } from 'react-icons/fa6';
 
 const InputContainer = styled.div`
   width: 100%;
-  height: 2.5rem;
-  padding: 0.3rem 0.5rem;
+  height: 3rem;
+  padding: 0.5rem 1rem;
   margin: 0;
   border-radius: 0.4rem;
   box-sizing: border-box;
 
-  display: grid;
-  grid-template-column: auto 1.5rem;
-  align-items: center;
-  grid-column-gap: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
 
   border: 1px solid #ccc;
   transition: border-color 0.2s ease-in-out;
@@ -28,7 +27,7 @@ const InputContainer = styled.div`
 `;
 
 const InputBox = styled.input`
-  grid-column-start: 1;
+  flex: 1;
 
   box-sizing: border-box;
   margin: 0;
@@ -42,11 +41,12 @@ const InputBox = styled.input`
 `;
 
 const InfoDiv = styled.div`
-  width: 1rem;
-  grid-column-start: 2;
+  width: 1rem
+  flex: 0 0 1.5rem;
 
   display: flex;
-
+  justify-content: center;
+  align-items: center;
   margin: 0;
   padding: 0;
 `;
@@ -87,23 +87,21 @@ export function Input({ value, onChange, password = false }) {
   }
 
   return (
-    <div>
-      <InputContainer>
-        <InputBox
-          type={`${(password && !showPassword) ? "password" : "text"}`}
-          placeholder="Enter something..."
-          onKeyDown={handleKeyDown}
-          onBlur={handleBlur}
-          value={value}
-          onChange={onChange}
-        />
-        <InfoDiv>
-          {!password && typing && <FaSpinner />}
-          {!password && valid && <FaSquareCheck />}
-          {password && !showPassword && <FaEyeSlash onClick={handleShowPassword} />}
-          {password && showPassword && <FaEye onClick={handleHidePassword} />}
-        </InfoDiv>
-      </InputContainer>
-    </div >
+    <InputContainer>
+      <InputBox
+        type={`${(password && !showPassword) ? "password" : "text"}`}
+        placeholder="Enter something..."
+        onKeyDown={handleKeyDown}
+        onBlur={handleBlur}
+        value={value}
+        onChange={onChange}
+      />
+      <InfoDiv>
+        {!password && typing && <FaSpinner />}
+        {!password && valid && <FaSquareCheck />}
+        {password && !showPassword && <FaEyeSlash onClick={handleShowPassword} />}
+        {password && showPassword && <FaEye onClick={handleHidePassword} />}
+      </InfoDiv>
+    </InputContainer>
   );
 };
