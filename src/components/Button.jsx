@@ -15,6 +15,10 @@ const ButtonContainer = styled.button`
     cursor: pointer;
     background-color: #007bae;
   }
+
+  &:active {
+    background-color: #008dc8;
+  }
 `;
 
 export function LargeButton({ label }) {
