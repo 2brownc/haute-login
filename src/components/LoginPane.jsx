@@ -71,6 +71,10 @@ const TextRight = styled.div`
   text-align: right;
 `;
 
+const TextBold = styled.div`
+  font-weight: bold;
+`;
+
 export function LoginPane() {
   const [loginId, setLoginId] = useState("");
   const [password, setPassword] = useState("");
@@ -84,8 +88,8 @@ export function LoginPane() {
       <LoginText>Login</LoginText>
 
       <InputContainer>
-        <Input />
-        <Input password />
+        <Input placeholder={"Enter Login ID"} />
+        <Input placeholder={"Enter Password"} password />
       </InputContainer>
 
       <OptionContainer>

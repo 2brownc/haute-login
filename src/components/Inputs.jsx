@@ -13,6 +13,9 @@ const InputContainer = styled.div`
   border-radius: 0.4rem;
   box-sizing: border-box;
 
+  font-size : 1.2rem;
+  color: grey;
+
   display: flex;
   flex-direction: row;
   gap: 1rem;
@@ -35,8 +38,10 @@ const InputBox = styled.input`
   border: none;
   outline: none;
 
+  font-size: 1.1rem;
+
   &::placeholder {
-    color: #ccc;
+   
   }
 `;
 
@@ -56,7 +61,7 @@ const InfoDiv = styled.div`
   
 `;
 
-export function Input({ value, onChange, password = false }) {
+export function Input({ value, onChange, placeholder, password = false }) {
   const [typing, setTyping] = useState(false);
   const [valid, setValid] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
@@ -95,7 +100,7 @@ export function Input({ value, onChange, password = false }) {
     <InputContainer>
       <InputBox
         type={`${(password && !showPassword) ? "password" : "text"}`}
-        placeholder="Enter something..."
+        placeholder={placeholder}
         onKeyDown={handleKeyDown}
         onBlur={handleBlur}
         value={value}
